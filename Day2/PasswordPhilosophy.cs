@@ -17,7 +17,7 @@ namespace Day2
 
         public static int Two(IEnumerable<Entry> input)
         {
-            throw new NotImplementedException();
+            return input.Count(e => e.Password[e.To-1].Equals(e.Letter) ^ e.Password[e.From - 1].Equals(e.Letter));
         }
     }
 }
